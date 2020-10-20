@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+ 
+    <meta charset="utf-8">
+    <title>Moja Stranka</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+ <script>
+	function controla_veku()
+	{
+		var user_date = new Date(document.getElementById("inputDate").value);
+		var current_date = new Date();
+		var vek = document.getElementById("vek").value;
+		if((current_date.getFullYear()>=user_date.getFullYear())&&(current_date.getMonth()>=user_date.getMonth())){
+			if(vek == (current_date.getFullYear()-user_date.getFullYear()))
+			{
+				
+				return true;
+			}
+			else
+			{
+				alert("Nespravny vek alebo datum narodenia");
+				return false;
+			}
+		}else if((current_date.getFullYear()>=user_date.getFullYear())&&(current_date.getMonth()<=user_date.getMonth())){
+			if(vek == (current_date.getFullYear()-1-user_date.getFullYear()))
+			{
+				
+				return true;
+			}
+			else
+			{
+				alert("Nespravny vek alebo datum narodenia");
+				return false;
+			}
+		}
+		return true;
+	}
+ </script>
+
+</body>
+
+ <footer class="cantered-horizontal footer">
+    <p>©2019 by Tetiana Kukhelna. Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity v Bratislave.</p>
+</footer>
+</html>
