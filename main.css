@@ -1,0 +1,97 @@
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  color: black;
+  background: #4CAF50;
+  font-weight: 100;
+  line-height: 30px;
+}
+
+.center {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#forma {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 100px 0;
+  border-style: outset;
+  border-width: 10px;
+  border-color: #008000;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5);
+}
+
+
+fieldset {
+  border: 0;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+
+#forma input[type="text"],
+#forma input[type="number"],
+#forma input[type="date"],
+#forma input[type="email"],
+#forma textarea {
+  width: 80%;
+  border: 1px solid gray;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#forma button[type="submit"] {
+  cursor: pointer;
+  width: 40%;
+  border: none;
+  background: #4CAF50;
+  color: #fbf8f8;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#top_book_name{
+	visibility: hidden;
+	margin-left: 0;
+	width: 200px;
+}
+
+#top_book:checked + #top_book_name{
+	visibility: visible;
+}
+
+select{
+	width:150px
+}
+
+
+#horory, #edgar_poe {
+	display: inline;
+}
+
+
+#fantasy‎, #detekt, #stephen_king, #mary_shelley, #john_tolkien, #terry_pratchett, #doyle, #agathy {
+	display: none;
+}
+
+#first_book, #book_age{
+	display: none;
+}
+
+span{
+	color: red;
+}
+
+legend{
+	font-family: URW Chancery L, cursive;
+	font-size: 12px;
+}
+
+
+

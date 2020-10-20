@@ -1,0 +1,17 @@
+:root{
+
+}
+
+
+.coffeeBlock{
+
+}
+
+.coffeeBlock > div {
+    display: inline-flex;
+    width: 50%;
+}
+
+.BranchCoffee{
+    display: none;
+}
