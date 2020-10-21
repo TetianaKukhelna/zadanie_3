@@ -339,7 +339,7 @@ function validateRequired(){
         const userFullYears = Math.floor((now - dateBirthTimeStamp)/1000/(60*60*24*365))
         console.log("userFullYears: ", userFullYears)
         console.log("vek.value: ", vek.value)
-        if( userFullYears == vek.value  ){
+        if( userFullYears === Number(vek.value)  ){
             date.className = date.className.replace(invalidateClass, '')
         }else{
             if( !date.className.includes(invalidateClass) )
