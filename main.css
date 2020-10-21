@@ -2,25 +2,25 @@
 body {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   color: black;
-  background: #4CAF50;
+  background: #DEC199;
   font-weight: 100;
   line-height: 30px;
 }
 
 .center {
-  max-width: 400px;
+  max-width: 500px;
   width: 100%;
   margin: 0 auto;
   position: relative;
 }
 
 #forma {
-  background: #F9F9F9;
+  background: #996D4A;
   padding: 25px;
   margin: 100px 0;
   border-style: outset;
-  border-width: 10px;
-  border-color: #008000;
+  border-width: 5px;
+  border-color: #E3C9B1;
   box-shadow: 0 0 50px rgba(0,0,0,0.5);
 }
 
@@ -49,7 +49,7 @@ fieldset {
   cursor: pointer;
   width: 40%;
   border: none;
-  background: #4CAF50;
+  background: #9AB396;
   color: #fbf8f8;
   margin: 0 0 5px;
   padding: 10px;

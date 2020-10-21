@@ -15,3 +15,30 @@
 .BranchCoffee{
     display: none;
 }
+
+.text_pole{
+	border: 1px;
+	margin: 0 0 10px;
+	width: 100%;
+	display: flex;
+	position: center;
+}
+
+.coffeeMethod{
+
+}
+
+.coffeeMethod > div {
+    display: inline-flex;
+    width:150px;
+}
+
+footer{
+    background-color: #272727;
+    color: #e8e8e8;
+}
+
+.cantered-horizontal {
+    display: flex;
+    justify-content: center;
+}

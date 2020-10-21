@@ -25,17 +25,17 @@
         <fieldset>
             <span>&#9830;</span>
             <label for="inputMeno">Meno: </label><br>
-            <input id="inputMeno" placeholder="Napriklad: Denis" type="text" tabindex="1" required autofocus>
+            <input id="inputMeno" placeholder="Napriklad: Lejla" type="text" tabindex="1" required autofocus>
         </fieldset>
         <fieldset>
             <span>&#9830;</span>
-            <label for="inputLastName">Last name: </label><br>
-            <input id="inputLastName" placeholder="Napriklad: Pilsudskii" type="text" tabindex="1" required autofocus>
+            <label for="inputLastName">Priezvesko: </label><br>
+            <input id="inputLastName" placeholder="Napriklad: Pilsudska" type="text" tabindex="1" required autofocus>
         </fieldset>
         <fieldset>
     <!--        <span>&#9830;</span>-->
             <label for="vek">Vek: </label><br>
-            <input id="vek" placeholder="Napriklad: 55" type="number"  tabindex="2">
+            <input id="vek" placeholder="Napriklad: 26" type="number"  tabindex="2">
         </fieldset>
         <fieldset>
             <span>&#9830;</span>
@@ -50,101 +50,217 @@
     </section>
 
     <section class="coffeeBlock">
-        <p><b>Do you love coffee?</b></p>
+        <p><b>Máte radi kávu?</b></p>
         <div>
             <input id="coffeeYes" name="coffeeQuestion" type="radio" value="yes">
-            <label id="coffeeYesLabel" for="coffeeYes">Yes</label>
+            <label id="coffeeYesLabel" for="coffeeYes">Ano</label>
         </div><div>
             <input id="coffeeNo" name="coffeeQuestion" type="radio" value="no">
-            <label id="coffeeNoLabel" for="coffeeNo">No</label>
+            <label id="coffeeNoLabel" for="coffeeNo">Nie</label>
         </div>
     </section>
 
     <section id="CoffeeNoBlock" class="BranchCoffee">
-        lalala
+        <div class="text_pole">
+            <fieldset>
+                <input id="coffeeNo" placeholder="Napriklad:Ktorý nápoj máš najradšej?" type="text" tabindex="1">
+            </fieldset>
+        </div>
     </section>
+
     <section id="CoffeeYesBlock" class="BranchCoffee">
-        olololo
+        <div>
+            <input id="methodFilter" name="choice" type="checkbox" value="filter">
+            <label for="methodFilter"> Filter</label><br>
+
+            <input id="methodMachine" name="choice" type="checkbox" value="machine">
+            <label for="methodMachine"> Stroj</label><br>
+
+            <input id="methodAnother" name="choice" type="checkbox" value="filter">
+            <label for="methodAnother"> Ina odpoved</label><br>
+        </div>
     </section>
 
+    <section id="methodFilter" class="BranchCoffee">
+        <div>
+            <select id="methodFilter" name="method">
+                <option value="brew">Brew Kava</option>
+                <option value="cerstva‎">Čerstva Kava‎</option>
+            </select>
+        </div>
+        <div>
+            <select id="brew" name="method">
+                <option value="vyprazena">Vyprážané</option>
+                <option value="pikantna‎">Pikantna‎</option>
+            </select>
+        </div>
+        <div>
+            <select id="cerstva‎" name="method">
+                <option value="kysla">Kysla</option>
+                <option value="ovocna">Ovocna</option>
+            </select>
+        </div>
+
+        <div>
+            <select id="vyprazena" name="method">
+                <option value="stiplavy">Štipľavý</option>
+                <option value="spaleny">Spálený</option>
+            </select>
+        </div>
+        <div>
+            <select id="pikantna‎" name="method">
+                <option value="aniz">Aníz</option>
+                <option value="muskat">Muškát</option>
+            </select>
+        </div>
+
+        <div>
+            <select id="kysla" name="method">
+                <option value="kysla_vona">Kyslá vôňa</option>
+                <option value="kyselina">Kyselina maslová</option>
+            </select>
+        </div>
+        <div>
+            <select id="ovocna" name="method">
+                <option value="oranzova">Oranžová</option>
+                <option value="‎jablko">Jablko</option>
+            </select>
+        </div>
+    </section>
+
+    <section id="methodMachine" class="BranchCoffee">
+        <div>
+            <select id="methodMachine" name="method">
+                <option value="espresso">Espresso</option>
+                <option value="cappucccino‎">Cappuccino‎</option>
+            </select>
+        </div>
+        <div>
+            <select id="espresso" name="method">
+                <option value="ine">Ina</option>
+                <option value="kakao">Kakao‎</option>
+            </select>
+        </div>
+        <div>
+            <select id="cappucccino‎" name="method">
+                <option value="sladké">Sladké</option>
+                <option value="orech">Orech</option>
+            </select>
+        </div>
+
+        <div>
+            <select id="ine" name="method">
+                <option value="woody">Woody</option>
+                <option value="zaprasene">Zaprášené</option>
+            </select>
+        </div>
+        <div>
+            <select id="kakao‎" name="method">
+                <option value="tm_cokolada">Tmavá čokoláda</option>
+                <option value="cokolada">Čokoláda</option>
+            </select>
+        </div>
+
+         <div>
+            <select id="sladke" name="method">
+                <option value="karamel">Karamel</option>
+                <option value="vanil">Vanilka</option>
+            </select>
+        </div>
+        <div>
+            <select id="orech" name="method">
+                <option value="mandle">Mandle</option>
+                <option value="arasidy">Arašidy</option>
+            </select>
+        </div>
+
+    </section>
+
+    <section id="methodAnother" class="BranchCoffee">
+        <div class="text_pole">
+            <fieldset>
+                <input id="methodAnother" placeholder="Tvoja odpoved" type="text" tabindex="1">
+            </fieldset>
+        </div>
+    </section>
+
+<!--     <div>
+            <p><b>Druh Kavy</b></p>
+            <input id="arabika" name="druh_kavy" type="radio" value="arabika"> Arabika
+            <input id="robusta" name="druh_kavy" type="radio" value="robusta"> Robusta
+    </div> -->
 
 
+        <!-- <select id="method" name="zanry">
+            <option value="horory‎">Horory‎</option>
+            <option value="fantasy‎">Fantasy‎</option>
+            <option value="detekt">Detektivní romány‎</option>
+        </select>
+
+        <select id="horory‎" name="zanry">
+            <option value="edgar_poe">Edgar Allen Poe</option>
+            <option value="stephen_king">Stephen King</option>
+            <option value="mary_shelley">Mary Shelley</option>
+        </select>
+
+        <select id="fantasy‎" name="zanry">
+            <option value="john_tolkien">John Tolkien</option>
+            <option value="terry_pratchett">Terry Pratchett</option>
+        </select>
+
+        <select id="detekt" name="zanry">
+            <option value="doyle">Arthur Conan Doyle</option>
+            <option value="agathy">Agathy Christie</option>
+        </select>
+
+        <select id="edgar_poe" name = "authors">
+            <option value="scary">Scary Stories</option>
+            <option value="seven_tales">Sixty-Seven Tales</option>
+        </select>
+
+        <select id="stephen_king" name = "authors">
+            <option value="storm">Storm of the Century</option>
+            <option value="blood">Blood and Smoke</option>
+        </select>
+
+        <select id="mary_shelley" name = "authors">
+            <option value="frankenstein">Frankenstein</option>
+            <option value="last_man">The Last Man</option>
+        </select>
+
+        <select id="john_tolkien" name = "authors">
+            <option value="arthur">The Fall of Arthur</option>
+            <option value="silmarillion">The Silmarillion</option>
+        </select>
+
+        <select id="terry_pratchett" name = "authors">
+            <option value="odd">The Wizards of Odd</option>
+            <option value="cat">The Unadulterated Cat</option>
+        </select>
 
 
+        <select id="doyle" name = "authors">
+            <option value="holmes">Sherlock Holmes</option>
+            <option value="band">The Speckled Band</option>
+        </select>
+
+        <select id="agathy" name = "authors">
+            <option value="brown_suit">The Man in the Brown Suit</optio>
+            <option value="big_four">The Big Four</option>
+        </select> -->
 
 
+    
 
-    <select id="zanry" name="zanry">
-        <option value="horory‎">Horory‎</option>
-        <option value="fantasy‎">Fantasy‎</option>
-        <option value="detekt">Detektivní romány‎</option>
-    </select>
-
-    <select id="horory‎" name="zanry">
-        <option value="edgar_poe">Edgar Allen Poe</option>
-        <option value="stephen_king">Stephen King</option>
-        <option value="mary_shelley">Mary Shelley</option>
-    </select>
-
-    <select id="fantasy‎" name="zanry">
-        <option value="john_tolkien">John Tolkien</option>
-        <option value="terry_pratchett">Terry Pratchett</option>
-    </select>
-
-    <select id="detekt" name="zanry">
-        <option value="doyle">Arthur Conan Doyle</option>
-        <option value="agathy">Agathy Christie</option>
-    </select>
-
-    <select id="edgar_poe" name = "authors">
-        <option value="scary">Scary Stories</option>
-        <option value="seven_tales">Sixty-Seven Tales</option>
-    </select>
-
-    <select id="stephen_king" name = "authors">
-        <option value="storm">Storm of the Century</option>
-        <option value="blood">Blood and Smoke</option>
-    </select>
-
-    <select id="mary_shelley" name = "authors">
-        <option value="frankenstein">Frankenstein</option>
-        <option value="last_man">The Last Man</option>
-    </select>
-
-    <select id="john_tolkien" name = "authors">
-        <option value="arthur">The Fall of Arthur</option>
-        <option value="silmarillion">The Silmarillion</option>
-    </select>
-
-    <select id="terry_pratchett" name = "authors">
-        <option value="odd">The Wizards of Odd</option>
-        <option value="cat">The Unadulterated Cat</option>
-    </select>
-
-
-    <select id="doyle" name = "authors">
-        <option value="holmes">Sherlock Holmes</option>
-        <option value="band">The Speckled Band</option>
-    </select>
-
-    <select id="agathy" name = "authors">
-        <option value="brown_suit">The Man in the Brown Suit</option>
-        <option value="big_four">The Big Four</option>
-    </select>
-
-    <div>
+    <!-- <div>
         <label>Máš najobľúbenejšiu knihu?</label>
         <input type="checkbox" name="top_book" id="top_book">
         <input type="text" name="top_book_name" id="top_book_name" placeholder="Nazov">
     </div>
+ -->
+    
 
-    <div>
-        <label>Pohlavie</label>
-        <input type="radio" name="pohlavie" value="muz" id="muz" checked> Muž
-        <input type="radio" name="pohlavie" value="zena" id="zena"> Žena
-    </div>
-
-    <fieldset id = "first_book">
+    <!-- <fieldset id = "first_book">
         <legend> Nazov knihy, ktoru si precital(a) prvy krat v zivote? </legend>
         <textarea  placeholder="Nejaki text..+"  ></textarea>
     </fieldset>
@@ -152,12 +268,8 @@
     <fieldset id = "book_age">
         <legend> Kolko si mal(a) rokov, ked precital(a) svoju prvu knihu? </legend>
         <textarea  placeholder="Nejaki text..-"  ></textarea>
-    </fieldset>
+    </fieldset> -->
 
-    <fieldset>
-        <span>&#9830;</span>O sebe: <br>
-        <textarea placeholder="Nejaki text..." tabindex="4" required></textarea>
-    </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="submit">Poslat</button>
     </fieldset>
@@ -216,6 +328,27 @@ function changeCoffeeState() {
 $("#coffeeYes").onchange = changeCoffeeState
 $("#coffeeNo").onchange = changeCoffeeState
 
+function choiceMethod() {
+   if (this.checked && this.id === 'methodFilter'){
+       $("#methodFilter").style.display = 'flex';
+       $("#methodMachine").style.display = 'none';
+       $("#methodAnother").style.display = 'none';
+   }
+   else if(this.checked && this.id === 'methodMachine'){
+       $("#methodFilter").style.display = 'none';
+       $("#methodMachine").style.display = 'flex';
+       $("#methodAnother").style.display = 'none';
+   }
+   else{
+       $("#methodFilter").style.display = 'none';
+       $("#methodMachine").style.display = 'none';
+       $("#methodAnother").style.display = 'flex';
+   }
+}
+$("#methodFilter").onchange = choiceMethod
+$("#methodMachine").onchange = choiceMethod
+$("#methodAnother").onchange = choiceMethod
+
 
 
 
@@ -269,4 +402,7 @@ $("#coffeeNo").onchange = changeCoffeeState
 // };
 </script>
 </body>
+<footer class="cantered-horizontal footer">
+    <p>©2019 by Tetiana Kukhelna. Fakulta elektrotechniky a informatiky Slovenskej technickej univerzity v Bratislave.</p>
+</footer>
 </html>
