@@ -210,94 +210,10 @@
 <!--        </div>-->
 <!--    </section>-->
 
-<!--     <div>
-            <p><b>Druh Kavy</b></p>
-            <input id="arabika" name="druh_kavy" type="radio" value="arabika"> Arabika
-            <input id="robusta" name="druh_kavy" type="radio" value="robusta"> Robusta
-    </div> -->
 
-
-        <!-- <select id="method" name="zanry">
-            <option value="horory‎">Horory‎</option>
-            <option value="fantasy‎">Fantasy‎</option>
-            <option value="detekt">Detektivní romány‎</option>
-        </select>
-
-        <select id="horory‎" name="zanry">
-            <option value="edgar_poe">Edgar Allen Poe</option>
-            <option value="stephen_king">Stephen King</option>
-            <option value="mary_shelley">Mary Shelley</option>
-        </select>
-
-        <select id="fantasy‎" name="zanry">
-            <option value="john_tolkien">John Tolkien</option>
-            <option value="terry_pratchett">Terry Pratchett</option>
-        </select>
-
-        <select id="detekt" name="zanry">
-            <option value="doyle">Arthur Conan Doyle</option>
-            <option value="agathy">Agathy Christie</option>
-        </select>
-
-        <select id="edgar_poe" name = "authors">
-            <option value="scary">Scary Stories</option>
-            <option value="seven_tales">Sixty-Seven Tales</option>
-        </select>
-
-        <select id="stephen_king" name = "authors">
-            <option value="storm">Storm of the Century</option>
-            <option value="blood">Blood and Smoke</option>
-        </select>
-
-        <select id="mary_shelley" name = "authors">
-            <option value="frankenstein">Frankenstein</option>
-            <option value="last_man">The Last Man</option>
-        </select>
-
-        <select id="john_tolkien" name = "authors">
-            <option value="arthur">The Fall of Arthur</option>
-            <option value="silmarillion">The Silmarillion</option>
-        </select>
-
-        <select id="terry_pratchett" name = "authors">
-            <option value="odd">The Wizards of Odd</option>
-            <option value="cat">The Unadulterated Cat</option>
-        </select>
-
-
-        <select id="doyle" name = "authors">
-            <option value="holmes">Sherlock Holmes</option>
-            <option value="band">The Speckled Band</option>
-        </select>
-
-        <select id="agathy" name = "authors">
-            <option value="brown_suit">The Man in the Brown Suit</optio>
-            <option value="big_four">The Big Four</option>
-        </select> -->
-
-
-    
-
-    <!-- <div>
-        <label>Máš najobľúbenejšiu knihu?</label>
-        <input type="checkbox" name="top_book" id="top_book">
-        <input type="text" name="top_book_name" id="top_book_name" placeholder="Nazov">
-    </div>
- -->
-    
-
-    <!-- <fieldset id = "first_book">
-        <legend> Nazov knihy, ktoru si precital(a) prvy krat v zivote? </legend>
-        <textarea  placeholder="Nejaki text..+"  ></textarea>
-    </fieldset>
-
-    <fieldset id = "book_age">
-        <legend> Kolko si mal(a) rokov, ked precital(a) svoju prvu knihu? </legend>
-        <textarea  placeholder="Nejaki text..-"  ></textarea>
-    </fieldset> -->
 
     <fieldset>
-      <button name="submit" type="submit" id="submit">Poslat</button>
+      <button id="submitForm" name="submit" type="submit" id="submit">Poslat</button>
     </fieldset>
 
 </form>
@@ -354,90 +270,94 @@ function coffeeMethodChange(){
     
 }
 $("#CoffeeMethodSelect").onchange = coffeeMethodChange
-
-
-
-
-
-
-
-
-
-
-function choiceMethod() {
-    this
-    CoffeeMethodSelect
-   if (this.checked && this.id === 'methodFilter'){
-       $("#methodFilter").style.display = 'flex';
-       $("#methodMachine").style.display = 'none';
-       $("#methodAnother").style.display = 'none';
-   }
-   else if(this.checked && this.id === 'methodMachine'){
-       $("#methodFilter").style.display = 'none';
-       $("#methodMachine").style.display = 'flex';
-       $("#methodAnother").style.display = 'none';
-   }
-   else{
-       $("#methodFilter").style.display = 'none';
-       $("#methodMachine").style.display = 'none';
-       $("#methodAnother").style.display = 'flex';
-   }
+//
+function timeConverter(UNIX_timestamp){
+  var a = new Date(UNIX_timestamp);
+  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var year = a.getFullYear();
+  var month = months[a.getMonth()];
+  var date = a.getDate();
+  // var hour = a.getHours();
+  // var min = a.getMinutes();
+  // var sec = a.getSeconds();
+  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+  return time;
 }
-$("#methodFilter").onchange = choiceMethod
-$("#methodMachine").onchange = choiceMethod
-$("#methodAnother").onchange = choiceMethod
+
+function year2sec(y){
+    return y * 365 * 24 * 60 * 60
+}
+
+function validateRequired(){
+    const firstName = $("#inputMeno")
+    const lastName = $("#inputLastName")
+    const email = $("#inputEmail")
+    const date = $("#inputDate")
+    const vek = $("#vek")
+    const invalidateClass = "invalidateField"
+
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log("firstName.value", firstName.value)
+    if(firstName.value.length < 3){
+        if( !firstName.className.includes(invalidateClass) )
+            firstName.className += invalidateClass;
+    }else{
+        firstName.className = firstName.className.replace(invalidateClass, '')
+    }
+
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log("lastName.value", lastName.value)
+    if(lastName.value.length < 3){
+        if( !lastName.className.includes(invalidateClass) )
+            lastName.className += invalidateClass;
+    }else{
+        lastName.className = lastName.className.replace(invalidateClass, '')
+    }
+
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log("email", email.value)
+    const emailRe = new RegExp("^[a-z0-9._%+-]{3,}@[a-z]{3,}([.]{1}[a-z]{2,}|[.]{1}[a-z]{2,}[.]{1}[a-z]{2,})$")
+    if(!emailRe.test(email.value)){
+        if( !email.className.includes(invalidateClass) )
+            email.className += invalidateClass;
+    }else{
+        email.className = email.className.replace(invalidateClass, '')
+    }
+
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log('= = = = = = = = = = = = = = = = = = = = = ')
+    console.log("date", date.value)
+    if(!date.value){
+        if( !date.className.includes(invalidateClass) )
+            date.className += invalidateClass;
+    }else{
+        const dateBirthTimeStamp = new Date(date.value).getTime()
+        const now = Date.now()
+        const userFullYears = Math.floor((now - dateBirthTimeStamp)/1000/(60*60*24*365))
+        console.log("userFullYears: ", userFullYears)
+        console.log("vek.value: ", vek.value)
+        if( userFullYears == vek.value  ){
+            date.className = date.className.replace(invalidateClass, '')
+        }else{
+            if( !date.className.includes(invalidateClass) )
+                date.className += invalidateClass;
+        }
 
 
+    }
 
+}
 
-// muz.onchange = function() {
-//    document.getElementById("first_book").style.display = 'block';
-//    document.getElementById("book_age").style.display = 'none';
-// };
+$("#submitForm").onclick = validateRequired
+$("#inputMeno").onchange = validateRequired
+$("#inputLastName").onchange = validateRequired
+$("#inputEmail").onchange = validateRequired
+$("#inputDate").onchange = validateRequired
+$("#vek").onchange = validateRequired
 
-// var muz = document.getElementById('muz');
-// var zena = document.getElementById('zena');
-//
-// muz.onchange = function() {
-//   document.getElementById("first_book").style.display = 'block';
-//   document.getElementById("book_age").style.display = 'none';
-// };
-// zena.onchange = function() {
-//   document.getElementById("first_book").style.display = 'none';
-//   document.getElementById("book_age").style.display = 'block';
-// };
-//
-// var selectedOption0 = document.getElementById('zanry');
-// var htmlCollection0= document.getElementsByName('zanry');
-// var arr = Array.from(htmlCollection0);
-//
-//
-// var selectedOption1 = document.getElementById('horory‎');
-// var selectedOption2 = document.getElementById('fantasy‎');
-// var selectedOption3 = document.getElementById('detekt');
-// var htmlCollection1= document.getElementsByName('authors');
-// var arr1 = Array.from(htmlCollection1);
-//
-//
-// arr.shift();
-// arr1.shift();
-//
-// selectedOption0.onchange = function() {
-//   arr.forEach(function(element){ element.style.display = 'none'; });
-//   document.getElementById(this.value).style.display = 'inline';
-// };
-// selectedOption1.onchange = function() {
-//   arr1.forEach(function(element){ element.style.display = 'none'; });
-//   document.getElementById(this.value).style.display = 'inline';
-// };
-// selectedOption2.onchange = function() {
-//   arr1.forEach(function(element){ element.style.display = 'none'; });
-//   document.getElementById(this.value).style.display = 'inline';
-// };
-// selectedOption3.onchange = function() {
-//   arr1.forEach(function(element){ element.style.display = 'none'; });
-//   document.getElementById(this.value).style.display = 'inline';
-// };
 </script>
 </body>
 <footer class="cantered-horizontal footer">

@@ -50,10 +50,6 @@ select{
 	position: center;
 }
 
-.coffeeMethod{
-
-}
-
 .coffeeMethod > div {
     display: inline-flex;
     width:150px;
@@ -68,6 +64,14 @@ footer{
     display: flex;
     justify-content: center;
 }
+
+
+.invalidateField{
+    border-width: 4px!important;
+    border-color: #ff0000!important;
+}
+
+
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
    = = = = = = = = = = = = = = = =  H e l p e r s  = = = = = = = = = = = = = = = = = =
