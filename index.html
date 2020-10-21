@@ -56,126 +56,159 @@
     <section id="CoffeeNoBlock" class="BranchCoffee">
         <div class="text_pole">
             <fieldset>
-                <input id="coffeeNo" placeholder="Napriklad:Čaj?" type="text" tabindex="1">
+                <input id="anotherAnswer" placeholder="Napriklad:Čaj?" type="text" tabindex="1">
             </fieldset>
         </div>
     </section>
 
     <section id="CoffeeYesBlock" class="BranchCoffee">
-        <div>
-            <input id="methodFilter" name="choice" type="checkbox" value="filter">
-            <label for="methodFilter"> Filter</label><br>
+        <div class="flex-vertical width-100">
+            <h3 class="blockTitle">Druh Kavy</h3>
+            <div>
+                <div class="flex-inline">
+                    <label for="coffeeTypeArabika">Arabika</label>
+                    <input id="coffeeTypeArabika" name="druh_kavy" type="checkbox" value="arabika">
+                </div>
 
-            <input id="methodMachine" name="choice" type="checkbox" value="machine">
-            <label for="methodMachine"> Stroj</label><br>
+                <div class="flex-inline">
+                    <label for="coffeeTypeRobusta">Robusta</label>
+                    <input id="coffeeTypeRobusta" name="druh_kavy" type="checkbox" value="robusta">
+                </div>
 
-            <input id="methodAnother" name="choice" type="checkbox" value="filter">
-            <label for="methodAnother"> Ina odpoved</label><br>
+                <div class="flex-inline">
+                    <label for="coffeeTypeIna">Ina</label>
+                    <input id="coffeeTypeIna" name="druh_kavy" type="checkbox" value="ina">
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="methodFilter" class="BranchCoffee">
-        <div>
-            <select id="methodFilter" name="method">
-                <option value="brew">Brew Kava</option>
-                <option value="cerstva‎">Čerstva Kava‎</option>
-            </select>
-        </div>
-        <div>
-            <select id="brew" name="method">
-                <option value="vyprazena">Vyprážané</option>
-                <option value="pikantna‎">Pikantna‎</option>
-            </select>
-        </div>
-        <div>
-            <select id="cerstva‎" name="method">
-                <option value="kysla">Kysla</option>
-                <option value="ovocna">Ovocna</option>
-            </select>
-        </div>
-
-        <div>
-            <select id="vyprazena" name="method">
-                <option value="stiplavy">Štipľavý</option>
-                <option value="spaleny">Spálený</option>
-            </select>
-        </div>
-        <div>
-            <select id="pikantna‎" name="method">
-                <option value="aniz">Aníz</option>
-                <option value="muskat">Muškát</option>
-            </select>
-        </div>
-
-        <div>
-            <select id="kysla" name="method">
-                <option value="kysla_vona">Kyslá vôňa</option>
-                <option value="kyselina">Kyselina maslová</option>
-            </select>
-        </div>
-        <div>
-            <select id="ovocna" name="method">
-                <option value="oranzova">Oranžová</option>
-                <option value="‎jablko">Jablko</option>
-            </select>
-        </div>
-    </section>
-
-    <section id="methodMachine" class="BranchCoffee">
-        <div>
-            <select id="methodMachine" name="method">
-                <option value="espresso">Espresso</option>
-                <option value="cappucccino‎">Cappuccino‎</option>
-            </select>
-        </div>
-        <div>
-            <select id="espresso" name="method">
-                <option value="ine">Ina</option>
-                <option value="kakao">Kakao‎</option>
-            </select>
-        </div>
-        <div>
-            <select id="cappucccino‎" name="method">
-                <option value="sladké">Sladké</option>
-                <option value="orech">Orech</option>
-            </select>
-        </div>
-
-        <div>
-            <select id="ine" name="method">
-                <option value="woody">Woody</option>
-                <option value="zaprasene">Zaprášené</option>
-            </select>
-        </div>
-        <div>
-            <select id="kakao‎" name="method">
-                <option value="tm_cokolada">Tmavá čokoláda</option>
-                <option value="cokolada">Čokoláda</option>
-            </select>
-        </div>
-
-         <div>
-            <select id="sladke" name="method">
-                <option value="karamel">Karamel</option>
-                <option value="vanil">Vanilka</option>
-            </select>
-        </div>
-        <div>
-            <select id="orech" name="method">
-                <option value="mandle">Mandle</option>
-                <option value="arasidy">Arašidy</option>
-            </select>
-        </div>
-
-    </section>
-
-    <section id="methodAnother" class="BranchCoffee">
+    <section id="CoffeeInaBlock" class="BranchCoffee">
         <div class="text_pole">
             <fieldset>
-                <input id="methodAnother" placeholder="Tvoja odpoved" type="text" tabindex="1">
+                <input placeholder="Napriklad:Čaj?" type="text" tabindex="1">
             </fieldset>
         </div>
     </section>
+
+
+    <section id="CoffeeMethodBlock" class="BranchCoffee">
+        <div class="flex-vertical width-100">
+            <h3 class="blockTitle">Coffee method</h3>
+            <select id="CoffeeMethodSelect">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="filter">Filter</option>
+                <option value="machine">Stroj</option>
+            </select>
+        </div>
+    </section>
+
+
+    <section id="MethodFilterBlock" class="BranchCoffee">
+        <div class="flex-vertical width-100 mt-15">
+            <div>
+                <select id="methodFilter" name="method">
+                    <option value="brew">Brew Kava</option>
+                    <option value="cerstva‎">Čerstva Kava‎</option>
+                </select>
+            </div>
+            <div>
+                <select id="brew" name="method">
+                    <option value="vyprazena">Vyprážané</option>
+                    <option value="pikantna‎">Pikantna‎</option>
+                </select>
+            </div>
+            <div>
+                <select id="cerstva‎" name="method">
+                    <option value="kysla">Kysla</option>
+                    <option value="ovocna">Ovocna</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="vyprazena" name="method">
+                    <option value="stiplavy">Štipľavý</option>
+                    <option value="spaleny">Spálený</option>
+                </select>
+            </div>
+            <div>
+                <select id="pikantna‎" name="method">
+                    <option value="aniz">Aníz</option>
+                    <option value="muskat">Muškát</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="kysla" name="method">
+                    <option value="kysla_vona">Kyslá vôňa</option>
+                    <option value="kyselina">Kyselina maslová</option>
+                </select>
+            </div>
+            <div>
+                <select id="ovocna" name="method">
+                    <option value="oranzova">Oranžová</option>
+                    <option value="‎jablko">Jablko</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section id="MethodMachineBlock" class="BranchCoffee">
+        <div class="flex-vertical width-100 mt-15">
+            <div>
+                <select id="methodMachine" name="method">
+                    <option value="espresso">Espresso</option>
+                    <option value="cappucccino‎">Cappuccino‎</option>
+                </select>
+            </div>
+            <div>
+                <select id="espresso" name="method">
+                    <option value="ine">Ina</option>
+                    <option value="kakao">Kakao‎</option>
+                </select>
+            </div>
+            <div>
+                <select id="cappucccino‎" name="method">
+                    <option value="sladké">Sladké</option>
+                    <option value="orech">Orech</option>
+                </select>
+            </div>
+
+            <div>
+                <select id="ine" name="method">
+                    <option value="woody">Woody</option>
+                    <option value="zaprasene">Zaprášené</option>
+                </select>
+            </div>
+            <div>
+                <select id="kakao‎" name="method">
+                    <option value="tm_cokolada">Tmavá čokoláda</option>
+                    <option value="cokolada">Čokoláda</option>
+                </select>
+            </div>
+
+             <div>
+                <select id="sladke" name="method">
+                    <option value="karamel">Karamel</option>
+                    <option value="vanil">Vanilka</option>
+                </select>
+            </div>
+            <div>
+                <select id="orech" name="method">
+                    <option value="mandle">Mandle</option>
+                    <option value="arasidy">Arašidy</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+<!--    <section id="methodAnother" class="BranchCoffee">-->
+<!--        <div class="text_pole">-->
+<!--            <fieldset>-->
+<!--                <input id="methodAnother" placeholder="Tvoja odpoved" type="text" tabindex="1">-->
+<!--            </fieldset>-->
+<!--        </div>-->
+<!--    </section>-->
 
 <!--     <div>
             <p><b>Druh Kavy</b></p>
@@ -270,37 +303,6 @@
 </form>
 </div>
 <script>
-function controla_veku()
-{
-	var user_date = new Date(document.getElementById("inputDate").value);
-	var current_date = new Date();
-	var vek = document.getElementById("vek").value;
-	if((current_date.getFullYear()>=user_date.getFullYear())&&(current_date.getMonth()>=user_date.getMonth())){
-		if(vek == (current_date.getFullYear()-user_date.getFullYear()))
-		{
-
-			return true;
-		}
-		else
-		{
-			alert("Nespravny vek alebo datum narodenia");
-			return false;
-		}
-	}else if((current_date.getFullYear()>=user_date.getFullYear())&&(current_date.getMonth()<=user_date.getMonth())){
-		if(vek == (current_date.getFullYear()-1-user_date.getFullYear()))
-		{
-
-			return true;
-		}
-		else
-		{
-			alert("Nespravny vek alebo datum narodenia");
-			return false;
-		}
-	}
-	return true;
-}
-
 function $(id){
     if( id.startsWith('#') )
         return document.getElementById(id.substring(1));
@@ -321,7 +323,50 @@ function changeCoffeeState() {
 $("#coffeeYes").onchange = changeCoffeeState
 $("#coffeeNo").onchange = changeCoffeeState
 
+
+function changeCoffeeTypeState(){
+    if(this.checked && (this.value === "arabika" || this.value === "robusta")){
+        $("#CoffeeMethodBlock").style.display = 'flex';
+        $("#CoffeeInaBlock").style.display = 'none';
+    }else if(this.checked && this.value === "ina"){
+        $("#CoffeeMethodBlock").style.display = 'flex';
+        $("#CoffeeInaBlock").style.display = 'flex';
+    }else{
+        $("#CoffeeMethodBlock").style.display = 'none';
+        $("#CoffeeInaBlock").style.display = 'none';
+    }
+}
+
+$("#coffeeTypeArabika").onchange = changeCoffeeTypeState
+$("#coffeeTypeRobusta").onchange = changeCoffeeTypeState
+$("#coffeeTypeIna").onchange = changeCoffeeTypeState
+
+
+
+function coffeeMethodChange(){
+    if(this.value === "filter"){
+        $("#MethodFilterBlock").style.display = 'flex';
+        $("#MethodMachineBlock").style.display = 'none';
+    }else{
+        $("#MethodFilterBlock").style.display = 'none';
+        $("#MethodMachineBlock").style.display = 'flex';
+    }
+    
+}
+$("#CoffeeMethodSelect").onchange = coffeeMethodChange
+
+
+
+
+
+
+
+
+
+
 function choiceMethod() {
+    this
+    CoffeeMethodSelect
    if (this.checked && this.id === 'methodFilter'){
        $("#methodFilter").style.display = 'flex';
        $("#methodMachine").style.display = 'none';
