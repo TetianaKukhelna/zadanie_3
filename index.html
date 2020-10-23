@@ -11,17 +11,19 @@
 
 <div class="center conteiner">
     <div class="row">
-        <div class="col-4 text_pole_2">           
-            <input placeholder="Informacia  aku chcely by povedat" type="text_tu" tabindex="1">        
+        <div class="col-4" id="coll"> 
+            <fieldset>          
+                <input placeholder="Informacia  aku chcely by povedat" id="text_tu" tabindex="1"> 
+            </fieldset>       
         </div>
 
     <div class="col-4">    
-    <form id="forma"  method="post"  action="mailto:feistu01@gmail.com" enctype="multipart/form-data">
+    <form id="forma"  method="post"  action="http://iolab.sk/form2mail/form2mail.php" enctype="multipart/form-data">
         <input type="hidden" name="apikey" value="b4d66fa7620d158ff6115c9a4e754b2b">
 
                 <input type="hidden" name="from" value="xkukhelna@stuba.sk">
-                <input type="hidden" name="sender" value="Tetiana Kukhelna">
-                <input type="hidden" name="to" value="feistu01@gmail.com">
+                <input type="hidden" name="sender" value="">
+                <input type="hidden" name="to" value="kuchelnat@gmail.com">
                 <input type="hidden" name="subject" value="Tetiana Kukhelna">
                 <input type="hidden" name="redirectOk" value="http://http://147.175.121.202/~xkukhelna/podarilo/index.html">
                 <input type="hidden" name="redirectFalse" value="http://http://147.175.121.202/~xkukhelna/podarilo/index.html">
@@ -319,8 +321,9 @@
             <fieldset>
               <button id="submitForm" name="submit" type="submit">Poslat</button>
             </fieldset>
-        </div>
+    
         </form>
+    </div>
     </div>
 </div>
 <script>
